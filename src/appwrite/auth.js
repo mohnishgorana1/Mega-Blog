@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-catch */
+
 import conf from '../conf/conf'
 
 
@@ -17,9 +19,9 @@ export class AuthService {          // ek class
     }
 
     async createAccount({email, password, name}) {
-        // eslint-disable-next-line no-useless-catch
         try {
             const userAccount = await this.account.create(ID.unique(), email, password, name);
+            
             if(userAccount){
                 // call another method for login 
                 return this.login(email, password)
