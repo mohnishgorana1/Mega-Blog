@@ -1,13 +1,14 @@
-import { useSelector } from "react-redux";
 import { Container, Logo, LogoutButton } from "../index";
 import { Link, useNavigate } from "react-router-dom";
-import { logout } from "../../store/authSlice";
+
+import { useSelector } from "react-redux";
+
 
 function Header() {
   
   const authStatus = useSelector((state) => state.auth.status);
-
   const navigate = useNavigate();
+  
   const navItems = [
     {
       name: "Home",
@@ -54,7 +55,7 @@ function Header() {
                       onClick={() => navigate(item.slug)} 
                       className="inline-block px-6 py-2 duration-200 hover:bg-blue-200 rounded-full"
                     >
-                      item.name
+                      {item.name}
                     </button>
                   </li>
                 ) : null

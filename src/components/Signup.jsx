@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Input, Button, Logo } from "./index";
 import { login as authLogin } from "../store/authSlice";
@@ -32,14 +32,14 @@ function Signup() {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
+    <div className="flex items-center justify-center flex-col">
+      {/* <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
             <Logo width="100%" />
           </span>
         </div>
-      </div>
+      </div> */}
 
       <h2 className="text-center text-2xl font-bold leading-tight">Create Your Account</h2>
       <p className="mt-2 text-center text-base text-black/60">
