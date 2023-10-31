@@ -2,6 +2,7 @@
 import {Signup as SignUpComponent} from '../components'
  
 function Signup() {
+  
   return (
     <div className='py-8'>
         <SignUpComponent />
