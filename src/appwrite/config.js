@@ -1,4 +1,4 @@
-import { Service } from "appwrite/types/service";
+ import { Service } from "appwrite/types/service";
 import conf from "../conf/conf";
 import { Client, Account, ID, Databases, Storage, Query } from "appwrite";
 
